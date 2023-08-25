@@ -11,7 +11,7 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(255, 255, 1);
+    background: rgb(208, 1, 255);
    margin: 0 auto;
    margin-bottom: 30px;
     display: flex;
@@ -57,9 +57,12 @@ main {
 
 /* portfolio styles */
 #interests {
-    border: 4px silver ridge;
+    border: 4px rgb(236, 11, 195) ridge;
     padding: 8px;
 }
 h2, h3 {
     margin: 0px;
 }
+img {
+    border: 5px solid #0d3ce5;
+  }
