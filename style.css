@@ -54,20 +54,8 @@ main {
     flex: 1;
     padding: 15px;
 }
-
-/* portfolio styles */
-#interests {
-    border: 4px rgb(236, 11, 195) ridge;
-    padding: 8px;
-}
-h2, h3 {
-    margin: 0px;
-}
-img {
-    border: 5px solid #0d3ce5;
-  }
-           /* portfolio styles */
-           .content h1 {
+         /* portfolio styles */
+         .content h1 {
             color: black;
         }
 
@@ -84,9 +72,10 @@ img {
         }
 
         #portfolio li:hover {
-            background: #a50d4f;
+            background: #eee;
         }
 
         #portfolio a {
             text-decoration: none;
             color: #454545;
+        }
