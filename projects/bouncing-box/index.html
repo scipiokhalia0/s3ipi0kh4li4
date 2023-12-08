@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<body id="Bouncing-Box"></body>
 <head>
 	<meta charset="utf-8">
 	<title>Bouncing Box</title>
@@ -8,7 +9,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: rgb(228, 4, 249);
+			background-color: lavenderblush;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -19,6 +20,7 @@
 		}
 		.board{
 			height: 100vh;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKMs_jL523TMo_XSXYMswVINj7VJpREyZ6Q&usqp=CAU");
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -62,8 +64,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var positionX = myVariable + 10; 
-
+			var positionX = 0;
+			var points = 0; 
+			var speed = 10; 
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,10 +74,16 @@
 			turn it around! 
 			*/
 			function update() {
-				/* Your Code to Increase positionX by 10 HERE */
-				myVariable = myVariable + 10;
+				positionX = positionX + speed;
 				moveBoxTo(positionX)
 				
+				if (positionX > boardWidth){
+					speed = speed * -1;
+				}
+				
+				if (positionX < 0){
+					speed = speed * -1;
+				}
 
 			};
 
@@ -85,7 +94,16 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
+                points = points + 1;
+				speed = speed + 3; 
+				changeBoxText(points);
+			if (speed > 0){
+				speed = speed + 3;
+			}	
 
+			else if (speed < 0){
+				speed = speed
+			}
 
 			};
 		})();
